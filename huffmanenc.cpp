@@ -70,20 +70,15 @@ int main(int argc, char** argv){
     vector<huffmanNode*> forest;
     
     for (itr = freq.begin(); itr != freq.end(); ++ itr){
-      //cout << itr->first << itr->second << endl;
+  
      
       
 
        huffmanNode* newnode = new huffmanNode(itr->first, itr->second);
        bHeap.insert(newnode);
-      //bHeap.print();
-       // forest.push_back(newnode);
+    
     }
-    //bHeap.print();
 
-    //binaryHeap bHeap(forest);
-    // bHeap.print();
-    // cout << bHeap.size() << endl;
 
 
     while (bHeap.size() > 1){
@@ -93,13 +88,13 @@ int main(int argc, char** argv){
     huffmanNode* temp2 = bHeap.deleteMin();
   
     huffmanNode* temp = new huffmanNode('T', temp1->freq + temp2->freq);
-    //   cout << temp->g << temp->freq << endl;/////////
+
     temp->leftChild = temp1;
-    //  cout << temp1->g << temp1->freq << endl;///////
+  
     temp->rightChild = temp2;
-    //  cout << temp2->g << temp2->freq << endl;/////////
+
     bHeap.insert(temp);
-    // cout << bHeap.size() << endl;
+
 
     
     }
@@ -112,7 +107,7 @@ int main(int argc, char** argv){
     findCode(bHeap.findMin(), "", codekey);
 
     map<char, string>::iterator bitr;
-	//	cout << "k" << endl;
+
 
      for (bitr = codekey.begin(); bitr != codekey.end(); ++bitr){
       
