@@ -98,18 +98,10 @@ bool heap::isEmpty(){
 }
 
 void heap::print(){
-  /*
-  if (heap_size > 0){
-    
-
-  for (int i = 1; i <= heap_size; i++){
-    cout <<"( "<< heap[i]->g << ", " << heap[i]->freq << ") " << endl;
-  }
-  }
-  */
 
 
-  // cout << "(heap[0])" << endl;
+
+ 
   for (int i = 1; i <= heap_size; i++){
     cout << "( " << Heap[i]->g << ", " << Heap[i]->freq << ") " << endl;
     bool isPow2 = (((i+1)& ~(i))==(i+1))? i+1 : 0;
@@ -119,8 +111,7 @@ void heap::print(){
   }
   cout << endl;
 
-  
-  /// figure out how to print later
+ 
 }
 
 
@@ -169,21 +160,7 @@ void heap::percolateDown(int hole){
 
 
 void heap::buildTree(){
-  /*
- 
-  while (heap_size != 0){
-    huffmanNode* temp1 = deleteMin();
-    huffmanNode* temp2 = deleteMin();
-  
-    huffmanNode* temp = new huffmanNode('T', temp1->freq + temp2->freq);
-    temp->leftChild = temp1;
-    temp->rightChild = temp2;
-    insert(temp);
-  
-  }
 
-
-  */
 }
 					      
   
